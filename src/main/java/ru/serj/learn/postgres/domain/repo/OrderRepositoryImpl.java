@@ -1,9 +1,11 @@
 package ru.serj.learn.postgres.domain.repo;
 
-import ru.serj.learn.core.model.Order;
+import ru.serj.learn.core.api.Order;
+import ru.serj.learn.core.repo.OrderRepository;
 
-public class OrderRepositoryImpl {
+public class OrderRepositoryImpl implements OrderRepository {
+    @Override
     public void create(Order order) {
-        //реализация insert into order (id, user_id, product_id) values (?, ?, ?)
+        System.out.println("Module postgres. Order has been created");
     }
 }
